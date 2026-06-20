@@ -1,0 +1,16 @@
+[
+  {"input": "分析 600519", "expected": true, "note": "股票代码，核心触发场景"},
+  {"input": "看看中国平安", "expected": true, "note": "股票名称，核心触发场景"},
+  {"input": "研究 腾讯", "expected": true, "note": "公司名，核心触发场景"},
+  {"input": "投委会看看 茅台", "expected": true, "note": "直接点名投委会"},
+  {"input": "评估 特斯拉", "expected": true, "note": "境外股票"},
+  {"input": "分析 000651 和 600036", "expected": true, "note": "多标的"},
+  {"input": "帮我分析一下招商银行", "expected": true, "note": "自然语言分析请求"},
+  {"input": "你好", "expected": false, "note": "闲聊，不应触发"},
+  {"input": "什么是PE？", "expected": false, "note": "概念解释，不应触发"},
+  {"input": "今天天气怎么样", "expected": false, "note": "无关话题"},
+  {"input": "帮我写一首诗", "expected": false, "note": "无关创作"},
+  {"input": "比特币现在能买吗", "expected": false, "note": "非股票投资品"},
+  {"input": "黄金最近走势如何", "expected": false, "note": "非股票投资品"},
+  {"input": "一般性投资建议有什么", "expected": false, "note": "不指明具体标的"}
+]

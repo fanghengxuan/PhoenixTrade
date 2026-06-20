@@ -1,0 +1,26 @@
+{
+  "name": "phoenix-investment-committee",
+  "title": "Phoenix 投委会",
+  "version": "0.1.0",
+  "owner": "Phoenix+ Team",
+  "updated_at": "2026-06-21",
+  "status": "active",
+  "maturity_tier": "governed",
+  "lifecycle_stage": "production",
+  "context_budget_tier": "high",
+  "review_cadence": "monthly",
+  "skill_archetype": "governed",
+  "target_platforms": [
+    "openai",
+    "claude",
+    "generic",
+    "agent-skills-compatible",
+    "vscode"
+  ],
+  "factory_components": [
+    "references",
+    "evals",
+    "scripts",
+    "reports"
+  ]
+}

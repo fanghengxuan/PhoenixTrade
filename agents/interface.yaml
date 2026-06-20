@@ -1,0 +1,26 @@
+interface:
+  display_name: "Phoenix 投委会"
+  short_description: "机构化投资决策系统中枢。按三阶段流程（取数核验→规则估值→辩论审计）输出含五级评级、操作建议、安全边际和置信度标签的完整投资结论。"
+  default_prompt: "Use $phoenix-investment-committee when the user sends a stock analysis request with a specific stock code or company name, requiring the full Phoenix+ institutional decision process."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "claude"
+    - "generic"
+    - "vscode"
+  activation:
+    mode: "trigger"
+    paths: ["scripts/stock_check_v614.py"]
+  execution:
+    context: "multi-agent"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "metadata-adapter"
+    claude: "neutral-source-plus-adapter"
+    generic: "neutral-source"
+    vscode: "agent-skills-source-with-vscode-notes"
